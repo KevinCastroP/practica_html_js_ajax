@@ -12,24 +12,28 @@
 
 <body>
     <form name="formulario">
-        <input type="text" name="primer_nombre" id="primer_nombre" value="" placeholder="Introducir primer nombre"><br>
-        <input type="text" name="segundo_nombre" id="segundo_nombre" value="" placeholder="Introducir segundo nombre"><br>
-        <input type="text" name="primer_apellido" id="primer_apellido" value="" placeholder="Introducir primer apellido"><br>
-        <input type="text" name="segundo_apellido" id="segundo_apellido" value="" placeholder="Introducir segundo apellido"><br>
+        <input type="text" name="primer_nombre" id="primer_nombre" value="" placeholder="Introducir primer nombre"><br><br>
+        <input type="text" name="segundo_nombre" id="segundo_nombre" value="" placeholder="Introducir segundo nombre"><br><br>
+        <input type="text" name="primer_apellido" id="primer_apellido" value="" placeholder="Introducir primer apellido"><br><br>
+        <input type="text" name="segundo_apellido" id="segundo_apellido" value="" placeholder="Introducir segundo apellido"><br><br>
         <select name="tipo_de_documentacion" id="tipo_de_documentacion"><br>
             <option value="">Seleccione tipo de documento</option>
             <option value="CC">Cedula de ciudadania</option>
             <option value="CE">Cedula Extranjera</option>
             <option value="RC">Registro Civil</option>
         </select>
-        <input type="number" name="numero_de_identificacion" id="numero_de_identificacion" value="" placeholder="Introduce nùmero de Id"><br>
-        <p>Fecha de nacimiento: <input type="date" name="fecha_nacimiento" id="fecha_nacimiento"></p><br> Estado Civil:<br>
+        <input type="number" name="numero_de_identificacion" id="numero_de_identificacion" value="" placeholder="Introduce nùmero de Id"><br><br>
+        <label for="fecha_nacimiento">Fecha Nacimiento:</label><br>
+        <input type="date" name="fecha_nacimiento" id="fecha_nacimiento"><br><br>
+        <label for="estado_civil">Estado Civil:</label><br>
         <input type="radio" name="estado_civil" id="estado_civil" value="cas">Casado<br>
         <input type="radio" name="estado_civil" id="estado_civil_2" value="sol">Soltero<br>
         <input type="radio" name="estado_civil" id="estado_civil_3" value="uni">Union Libre<br><br>
         <input type="checkbox" name="licencia_conduccion" id="licencia_conduccion">Licencia de conducciòn<br>
         <input type="checkbox" name="pasaporte" id="pasaporte">Pasaporte<br>
-        <input type="checkbox" name="visa" id="visa">Visa<br>
+        <input type="checkbox" name="visa" id="visa">Visa<br><br>
+        <input type="button" name="enviar_btn" id="enviar_btn" value="Enviar Boton">
+        <input type="submit" name="enviar_sbm" id="enviar_sbm" value="Enviar Submit">
     </form>
 </body>
 
