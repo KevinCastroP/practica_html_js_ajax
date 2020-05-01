@@ -55,9 +55,9 @@ function validar_segundo_apellido() {
 }
 
 function validar_tipo_id() {
-    var tipo_documentacion = $('#tipo_documentacion').val();
+    var tipo_identificacion = $('#tipo_identificacion').val();
 
-    if (tipo_documentacion == 0 || tipo_documentacion == "") {
+    if (tipo_identificacion == 0 || tipo_identificacion == "") {
         alert("obligatorio seleccionar una opciòn");
         return false
     }
