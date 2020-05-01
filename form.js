@@ -1,3 +1,7 @@
+$(document).ready(function() {
+    console.log("ready!");
+});
+
 function validar_primer_nombre() {
     var primer_nombre = $('#primer_nombre').val();
 
