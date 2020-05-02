@@ -4,15 +4,7 @@ $(document).ready(function() {
     $('#visa').attr("disabled", true)
     $('#enviar_sbm').attr("disabled", true)
     $('#enviar_btn').val("Validar Formulario")
-
     $('input:radio[name=estado_civil]').filter('[value=sol]').prop('checked', true);
-    /*$(function() {
-        var $radios = $('input:radio[name=estado_civil]')
-        if ($radios.is(':checked') == false) {
-            $radios.filter('[value=sol]').prop('checked', true);
-        }
-    })*/
-    
     $('#pasaporte').change(function() {
         console.log("evaluando pasaporte")
         if ($(this).prop('checked')) { //prop = es el estado actual, asigna y lee
