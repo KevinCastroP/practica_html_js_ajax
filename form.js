@@ -1,5 +1,35 @@
 $(document).ready(function() {
     console.log("ready!");
+
+    $('#visa').attr("disabled", true)
+    $('#enviar_sbm').attr("disabled", true)
+    $(function() {
+        var $radios = $('input:radio[name=estado_civil]')
+        if ($radios.is(':checked') == false) {
+            $radios.filter('[value=sol]').prop('checked', true);
+        }
+    })
+    $('#pasaporte').change(function() {
+        console.log("evaluando pasaporte")
+        if ($(this).prop('checked')) { //prop = es el estado actual, asigna y lee
+            console.log("prendiendo pasaporte")
+            $('#visa').prop("disabled", false)
+        } else {
+            console.log("apagando pasaporte")
+            $('#visa').prop('checked', false)
+            $('#visa').prop("disabled", true)
+        }
+    })
+    $('#enviar_btn').click(function() {
+        if (validar_primer_nombre() &&
+            validar_segundo_nombre() &&
+            validar_primer_apellido() &&
+            validar_segundo_apellido() &&
+            validar_tipo_id() &&
+            validar_nro_id() == true) {
+            $('#enviar_sbm').prop("disabled", false)
+        }
+    })
 });
 
 function validar_primer_nombre() {
