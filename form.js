@@ -27,6 +27,13 @@ $(document).ready(function() {
             $('#enviar_sbm').prop("disabled", false)
         }
     })
+    cargar_input_select(
+        'tipo_identificacion', // campo
+        'http://appshub.cloud/practica_html_js_ajax/src/tipo_id.php', //url
+        'CE', //valor seleccionado incialmente
+        true, //borrar inputs actuales
+        'Seleccione un tipo de documento' //texto para el primer elemento cuyo value=''
+    )
 });
 
 function validar_primer_nombre() {
@@ -106,4 +113,17 @@ function validar_nro_id() {
         return false
     }
     return true
+}
+
+function cargar_input_select(campo, url, valor_seleccionado, limpiar_antes, texto_info = null) {
+
+
+    var operator = $('#' + campo)
+    if (limpiar_antes) {
+        operator.find('option').remove();
+    }
+    if (texto_info != null) {
+
+    }
+
 }
